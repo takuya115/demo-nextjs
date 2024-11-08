@@ -7,11 +7,12 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"ignore": []
+		"include": ["./src/**/*.ts", "./src/**/*.tsx"]
 	},
 	"formatter": {
 		"enabled": true,
-		"indentStyle": "tab"
+		"indentStyle": "tab",
+		"include": ["./src/**/*.ts", "./src/**/*.tsx"]
 	},
 	"organizeImports": {
 		"enabled": true
@@ -20,7 +21,8 @@
 		"enabled": true,
 		"rules": {
 			"recommended": true
-		}
+		},
+		"include": ["./src/**/*.ts", "./src/**/*.tsx"]
 	},
 	"javascript": {
 		"formatter": {

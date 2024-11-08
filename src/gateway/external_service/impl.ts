@@ -1,9 +1,9 @@
 import Data from "../../domain/models/data";
-import { ExternalService } from "../../domain/usecase/gateway";
+import type { ExternalService } from "../../domain/usecase/gateway";
 
 export default class ExternalServiceImpl implements ExternalService {
-    getData(id: string): Promise<Data> {
-        console.log(id)
-        return Promise.resolve(new Data(id))
-    }
+	getData(id: string): Promise<Data> {
+		console.log(id);
+		return Promise.resolve(new Data(id));
+	}
 }

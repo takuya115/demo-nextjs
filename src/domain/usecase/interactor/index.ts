@@ -1,14 +1,14 @@
-import Data from "../../models/data";
-import Gateway from "../gateway";
+import type Data from "../../models/data";
+import type Gateway from "../gateway";
 
 export default class Interactor {
-    gateway: Gateway
+	gateway: Gateway;
 
-    constructor(gateway: Gateway) {
-        this.gateway = gateway
-    }
+	constructor(gateway: Gateway) {
+		this.gateway = gateway;
+	}
 
-    async getData(id: string): Promise<Data> {
-        return this.gateway.externalService().getData(id)
-    }
+	async getData(id: string): Promise<Data> {
+		return this.gateway.externalService().getData(id);
+	}
 }
