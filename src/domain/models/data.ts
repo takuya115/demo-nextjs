@@ -1,7 +1,7 @@
 export default class Data {
-	text: string;
+	statusCode: number;
 
-	constructor(text: string) {
-		this.text = text;
+	constructor(statusCode: number) {
+		this.statusCode = statusCode;
 	}
 }

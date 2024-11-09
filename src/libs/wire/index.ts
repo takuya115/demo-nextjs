@@ -1,4 +1,6 @@
 import Interactor from "../../domain/usecase/interactor";
-import gatewayImpl from "./gateway";
+import { GatewayImpl } from "./gateway";
 
-export default new Interactor(gatewayImpl);
+export default function buildInteractor() {
+	return new Interactor(new GatewayImpl());
+}
