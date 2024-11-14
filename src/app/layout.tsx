@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import buildInteractor from "../libs/wire";
+import { InteractorProvider } from "./context";
 
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -24,12 +24,10 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	const interactor = buildInteractor();
-	console.log(interactor);
 	return (
 		<html lang="en">
 			<body className={`${geistSans.variable} ${geistMono.variable}`}>
-				{children}
+				<InteractorProvider>{children}</InteractorProvider>
 			</body>
 		</html>
 	);

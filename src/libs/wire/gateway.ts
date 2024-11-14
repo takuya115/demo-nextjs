@@ -1,7 +1,7 @@
 import type Gateway from "../../domain/usecase/gateway";
 import type { ExternalService, Repository } from "../../domain/usecase/gateway";
-import ExternalServiceImpl from "../../gateway/external_service/impl";
-import RepositoryImpl from "../../gateway/repository";
+import { ExternalServiceImpl } from "../../gateway/external_service";
+import { RepositoryImpl } from "../../gateway/repository";
 
 export class GatewayImpl implements Gateway {
 	_externalService: ExternalService;
